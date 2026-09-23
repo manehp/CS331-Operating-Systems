@@ -1,0 +1,44 @@
+
+main.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	f3 0f 1e fa          	endbr64
+   4:	55                   	push   %rbp
+   5:	48 89 e5             	mov    %rsp,%rbp
+   8:	48 83 ec 10          	sub    $0x10,%rsp
+   c:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  13:	00 00 
+  15:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  19:	31 c0                	xor    %eax,%eax
+  1b:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 22 <main+0x22>
+  22:	48 89 c7             	mov    %rax,%rdi
+  25:	b8 00 00 00 00       	mov    $0x0,%eax
+  2a:	e8 00 00 00 00       	call   2f <main+0x2f>
+  2f:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+  33:	48 89 c6             	mov    %rax,%rsi
+  36:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 3d <main+0x3d>
+  3d:	48 89 c7             	mov    %rax,%rdi
+  40:	b8 00 00 00 00       	mov    $0x0,%eax
+  45:	e8 00 00 00 00       	call   4a <main+0x4a>
+  4a:	8b 45 f0             	mov    -0x10(%rbp),%eax
+  4d:	89 c7                	mov    %eax,%edi
+  4f:	e8 00 00 00 00       	call   54 <main+0x54>
+  54:	89 45 f4             	mov    %eax,-0xc(%rbp)
+  57:	8b 45 f0             	mov    -0x10(%rbp),%eax
+  5a:	8b 55 f4             	mov    -0xc(%rbp),%edx
+  5d:	89 c6                	mov    %eax,%esi
+  5f:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 66 <main+0x66>
+  66:	48 89 c7             	mov    %rax,%rdi
+  69:	b8 00 00 00 00       	mov    $0x0,%eax
+  6e:	e8 00 00 00 00       	call   73 <main+0x73>
+  73:	b8 00 00 00 00       	mov    $0x0,%eax
+  78:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+  7c:	64 48 2b 14 25 28 00 	sub    %fs:0x28,%rdx
+  83:	00 00 
+  85:	74 05                	je     8c <main+0x8c>
+  87:	e8 00 00 00 00       	call   8c <main+0x8c>
+  8c:	c9                   	leave
+  8d:	c3                   	ret
